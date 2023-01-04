@@ -1,7 +1,11 @@
-import "./App.css";
+import { Container, Title } from "./style";
 
 function App() {
-  return <div>hello world</div>;
+  return (
+    <Container>
+      <Title>Speed Test</Title>
+    </Container>
+  );
 }
 
 export default App;
