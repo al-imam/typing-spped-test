@@ -15,3 +15,15 @@ export const Title = styled.h1`
   padding-bottom: 0.5rem;
   border-bottom: 5px solid rgba(20 20 20 / 0.1);
 `;
+
+export const Main = styled.div`
+  padding-block: 2rem;
+`;
+
+export const P = styled.p`
+  font-size: 1.5rem;
+  font-family: var(--ff-code);
+  color: var(--gray-100);
+  line-height: 1.5;
+  text-align: left;
+`;
