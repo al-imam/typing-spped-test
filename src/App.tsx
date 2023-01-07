@@ -13,6 +13,20 @@ function App() {
   return (
     <Container>
       <Title>Speed Test</Title>
+      <Main>
+        <P>
+          {Text.map((text, index) => (
+            <C text={text} index={index} input={input} />
+          ))}
+        </P>
+        <InputFiled
+          type="text"
+          value={input}
+          onChange={(evt) => setInput(evt.target.value)}
+          placeholder="Start Typing"
+        />
+        {input}
+      </Main>
     </Container>
   );
 }
