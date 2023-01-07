@@ -1,6 +1,15 @@
-import { Container, Title } from "./style";
+import { Container, Title, Main, P, Character, InputFiled } from "./style";
+import { useRef, useState, memo } from "react";
+
+function text() {
+  return 'Professionally printed material in English typically does not indent the first paragraph, but indents those that follow. For example, Robert Bringhurst states that we should "Set opening paragraphs flush left'.split(
+    ""
+  );
+}
 
 function App() {
+  const { current: Text } = useRef(text());
+  const [input, setInput] = useState("");
   return (
     <Container>
       <Title>Speed Test</Title>
