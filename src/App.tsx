@@ -140,7 +140,7 @@ function App() {
         </InfoWrapper>
         <P>
           {Text.map((text, index) => (
-            <C text={text} index={index} input={inputText} />
+            <C key={index} text={text} index={index} input={inputText} />
           ))}
         </P>
         <InputFiled
