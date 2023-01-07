@@ -27,3 +27,24 @@ export const P = styled.p`
   line-height: 1.5;
   text-align: left;
 `;
+
+export const InputFiled = styled.input`
+  font-family: var(--ff-text);
+  font-size: 1.5rem;
+  color: var(--gray-100);
+  width: 100%;
+  border-radius: 0.25rem;
+  margin-block: 1rem;
+
+  :focus {
+    box-shadow: 0 0 0 3px;
+  }
+
+  outline: 1px solid var(--gray-50);
+  border: none;
+  padding: 0.5rem;
+
+  ::placeholder {
+    color: var(--gray-50);
+  }
+`;
