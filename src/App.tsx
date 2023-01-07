@@ -1,5 +1,17 @@
-import { Container, Title, Main, P, Character, InputFiled } from "./style";
-import { useRef, useState, memo, useReducer, Reducer, useEffect } from "react";
+import {
+  Container,
+  Title,
+  P,
+  Main,
+  InputFiled,
+  TimeIcon,
+  SpeedIcon,
+  InfoWrapper,
+  Info,
+  Character,
+  Button,
+} from "./style";
+import { useRef, memo, useReducer, Reducer, useEffect } from "react";
 
 function text() {
   return 'Professionally printed material in English typically does not indent the first paragraph, but indents those that follow. For example, Robert Bringhurst states that we should "Set opening paragraphs flush left'.split(
@@ -110,8 +122,22 @@ function App() {
   return (
     <Container>
       <Title>Speed Test</Title>
-      {correctWord + JSON.stringify(testText.slice(-10, -1)) + time}
       <Main>
+        <InfoWrapper>
+          <Info>
+            <TimeIcon />
+            <Character>
+              {`${Math.floor(time / 60)}`.padStart(2, "0")}m{" "}
+              {`${time % 60}`.padStart(2, "0")}s
+            </Character>
+          </Info>
+          <Info>
+            <SpeedIcon />
+            <Character>
+              {(correctWord / (time / 60) || 0).toFixed(2)}WPM
+            </Character>
+          </Info>
+        </InfoWrapper>
         <P>
           {Text.map((text, index) => (
             <C text={text} index={index} input={inputText} />
@@ -124,8 +150,7 @@ function App() {
           onChange={(evt) => proccessInput(evt.target.value)}
           placeholder="Start Typing"
         />
-        {inputText}
-        <button onClick={handleStart}>Start</button>
+        <Button onClick={handleStart}>Start</Button>
       </Main>
     </Container>
   );
