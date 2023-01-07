@@ -48,3 +48,19 @@ export const InputFiled = styled.input`
     color: var(--gray-50);
   }
 `;
+
+export const Character = styled.span`
+  &.active {
+    background-color: #d3e9ff;
+    box-shadow: 0 2px 0 #000;
+  }
+
+  &.correct {
+    color: rgba(105, 161, 214, 255);
+  }
+
+  &.incorrect {
+    color: rgba(98, 70, 68, 255);
+    background-color: rgba(254, 204, 203, 255);
+  }
+`;
