@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Martian+Mono&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap");
 
 *,
 *::after,
@@ -11,7 +11,5 @@
 :root {
   --gray-100: hsl(215, 19%, 35%);
   --gray-50: hsl(24, 6%, 83%);
-
   --ff-code: "Martian Mono";
-  --ff-text: "Open Sans";
 }
